@@ -9,3 +9,10 @@ Rails.application.config.assets.version = '1.0'
 # Precompile additional assets.
 # application.js, application.css, and all non-JS/CSS in app/assets folder are already added.
 # Rails.application.config.assets.precompile += %w( search.js )
+
+F00px.configure do |config|
+  config.consumer_key =  "BoxG5odSoSJOljFWiwLEs2F5UCirndeUHHpaW9fq"
+  config.consumer_secret = "YGzAmcsm2oAsDMVrCCjInskkdfYOCLYfMb8bULfJ"
+  config.token = "token"
+  config.token_secret = "secret"
+end

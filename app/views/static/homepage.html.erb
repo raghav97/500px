@@ -1,0 +1,55 @@
+<% require 'json' %>
+<h1> Helo </h1>
+<% images = [] %>
+<% response = F00px.get('photos?feature=popular') %>
+<% a = response.body %>
+<% hash = JSON.parse(a) %>
+<% hash["photos"].each do |e| %>
+  <% images.push(e["image_url"]) %>
+<% end %>
+
+<% response = F00px.get('photos?feature=upcoming') %>
+<% a = response.body %>
+<% hash = JSON.parse(a) %>
+<% hash["photos"].each do |e| %>
+  <% images.push(e["image_url"]) %>
+<% end %>
+
+<% response = F00px.get('photos?feature=editors') %>
+<% a = response.body %>
+<% hash = JSON.parse(a) %>
+<% hash["photos"].each do |e| %>
+  <% images.push(e["image_url"]) %>
+<% end %>
+
+<% response = F00px.get('photos?feature=fresh_today') %>
+<% a = response.body %>
+<% hash = JSON.parse(a) %>
+<% hash["photos"].each do |e| %>
+  <% images.push(e["image_url"]) %>
+<% end %>
+
+<% response = F00px.get('photos?feature=fresh_yesterday') %>
+<% a = response.body %>
+<% hash = JSON.parse(a) %>
+<% hash["photos"].each do |e| %>
+  <% images.push(e["image_url"]) %>
+<% end %>
+
+<% response = F00px.get('photos?feature=fresh_week') %>
+<% a = response.body %>
+<% hash = JSON.parse(a) %>
+<% hash["photos"].each do |e| %>
+  <% images.push(e["image_url"]) %>
+<% end %>
+
+<img src = " https://drscdn.500px.org/photo/197539917/q%3D50_w%3D140_h%3D140/03cca4614dec7ff1af0d0bdd4e799e58?v=0" height = "500px">
+
+<% images.each do |e| %>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-3"><img class="image" src= "<%= e %>" />
+      </div>
+    </div>
+  </div>
+<% end %>
