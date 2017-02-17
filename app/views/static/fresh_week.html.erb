@@ -2,7 +2,7 @@
 
 <% images = [] %>
 
-<% response = F00px.get('photos?feature=popular') %>
+<% response = F00px.get('photos?feature=fresh_week') %>
 <% a = response.body %>
 <% hash = JSON.parse(a) %>
 <% hash["photos"].each do |e| %>

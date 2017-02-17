@@ -3,3 +3,14 @@ img{
   width: 30%;
   margin: 1.66%;
 }
+
+.pagination {
+    display: inline-block;
+}
+
+.pagination a {
+    color: black;
+    float: left;
+    padding: 8px 16px;
+    text-decoration: none;
+}
