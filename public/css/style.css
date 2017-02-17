@@ -18,3 +18,23 @@ img{
 .center{
   padding-left: 42%;
 }
+
+div {
+    display: none;
+    border:1px solid #000;
+    height:30px;
+    width:290px;
+    margin-left:10px;
+}
+
+a:hover + div {
+  display: block;
+}
+
+footer{
+  text-align: center;
+}
+
+.details{
+  border-left: 100px;
+}
