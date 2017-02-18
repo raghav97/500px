@@ -101,4 +101,7 @@ class StaticController < ApplicationController
     end
   end
 
+  def google7339e391eb244052
+
+  end
 end 
