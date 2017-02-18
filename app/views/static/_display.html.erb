@@ -1,0 +1,13 @@
+
+<% i = 0.to_i %>
+
+<% for i in 0..17  %>
+  <a> <img class="image" src= "<%= @images[i] %>" /> </a>
+  <div class = "info">
+    <%= @title[i] %> by
+    <%= @first_name[i] %>
+    <%= @last_name[i] %>
+  </div>
+<% end %>
+
+<br> <br>

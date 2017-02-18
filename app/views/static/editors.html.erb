@@ -2,33 +2,8 @@
 
 <%= render 'head' %>
 
-<% images = [] %>
-<% first_name = [] %>
-<% last_name = [] %>
-<% title = [] %>
+<%= render 'display' %>
 
-<% response = F00px.get('photos?feature=fresh_editors') %>
-<% a = response.body %>
-<% hash = JSON.parse(a) %>
-<% hash["photos"].each do |e| %>
-  <% images.push(e["image_url"]) %>
-  <% title.push(e["name"]) %>
-  <% first_name.push(e["user"]["firstname"]) %>
-  <% last_name.push(e["user"]["lastname"]) %>
-<% end %>
-
-<% i = 0.to_i %>
-
-<% for i in 0..17 %>
-  <a> <img class="image" src= "<%= images[i] %>" /> </a>
-  <div class = "info">
-    <%= title[i] %> by
-    <%= first_name[i] %>
-    <%= last_name[i] %>
-  </div>
-<% end %>
-
-<br> <br>
 <footer>
   <%= render 'paginate' %>
 </footer>
