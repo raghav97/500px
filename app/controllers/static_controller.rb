@@ -84,4 +84,21 @@ class StaticController < ApplicationController
     end
   end
 
+  def upcoming
+    @response = F00px.get('photos?feature=upcoming') 
+    @a = @response.body
+    @images = []
+    @title = []
+    @first_name = []
+    @last_name = []
+    
+    @hash = JSON.parse(@a)
+    @hash["photos"].each do |e|
+      @images.push(e["image_url"])
+      @title.push(e["name"])
+      @first_name.push(e["user"]["firstname"])
+      @last_name.push(e["user"]["lastname"])
+    end
+  end
+
 end 
