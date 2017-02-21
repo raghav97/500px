@@ -7,5 +7,5 @@ Rails.application.routes.draw do
   get '/editors' => 'static#editors'
   get '/upcoming' => 'static#upcoming'
 
-  get '/google7339e391eb244052' => 'static#google7339e391eb244052'
+  get '/google7339e391eb244052.html' => 'static#google7339e391eb244052'
 end
